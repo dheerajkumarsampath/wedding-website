@@ -100,5 +100,21 @@
             <button type="submit">Submit RSVP</button>
         </form>
     </div>
+<script>
+    document.getElementById('rsvp-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        fetch(this.action, {
+            method: 'POST',
+            body: new FormData(this)
+        })
+        .then(response => {
+            window.location.href = 'thanks.html';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting your RSVP. Please try again.');
+        });
+    });
+</script>
 </body>
 </html>
