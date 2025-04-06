@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f7f5;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            color: #9b8578;
+            margin-bottom: 10px;
+        }
+        
+        .names {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        
+        .date-location {
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        
+        .section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #9b8578;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        textarea {
+            height: 100px;
+        }
+        
+        button {
+            background-color: #9b8578;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #86726a;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>We're Getting Married!</h1>
+        <div class="names">Your Name & Partner's Name</div>
+        <div class="date-location">June 15, 2025 • Wedding Venue • City, State</div>
+    </div>
+    
+    <div class="section">
+        <h2>Our Story</h2>
+        <p>Share your story here. How you met, your journey together, and your proposal story.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Event Details</h2>
+        <h3>Ceremony</h3>
+        <p><strong>Date:</strong> June 15, 2025</p>
+        <p><strong>Time:</strong> 3:00 PM</p>
+        <p><strong>Location:</strong> Venue Name, Full Address</p>
+        
+        <h3>Reception</h3>
+        <p><strong>Time:</strong> 5:00 PM</p>
+        <p><strong>Location:</strong> Venue Name, Full Address</p>
+        
+        <h3>Dress Code</h3>
+        <p>Formal Attire</p>
+    </div>
+    
+    <div class="section">
+        <h2>RSVP</h2>
+        <p>Please respond by May 1, 2025</p>
+        
+        <form id="rsvp-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name(s)</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="attending">Will you be attending?</label>
+                <select id="attending" name="attending" required>
+                    <option value="">Select an option</option>
+                    <option value="Yes">Joyfully Accept</option>
+                    <option value="No">Regretfully Decline</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="guests">Number of guests (including yourself)</label>
+                <select id="guests" name="guests">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="meal">Meal Preference</label>
+                <select id="meal" name="meal">
+                    <option value="Chicken">Herb Roasted Chicken</option>
+                    <option value="Beef">Filet Mignon</option>
+                    <option value="Fish">Grilled Salmon</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="notes">Any dietary restrictions or special notes?</label>
+                <textarea id="notes" name="notes"></textarea>
+            </div>
+            
+            <button type="submit">Submit RSVP</button>
+        </form>
+    </div>
+    
+    <div class="section">
+        <h2>Accommodations</h2>
+        <p>We've arranged for a block of rooms at [Hotel Name]. Please mention our wedding when booking for a special rate.</p>
+        <p><strong>Phone:</strong> (123) 456-7890</p>
+        <p><strong>Website:</strong> <a href="#">hotelwebsite.com</a></p>
+    </div>
+</body>
+</html>
